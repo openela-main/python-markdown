@@ -3,11 +3,13 @@
 
 Name:           python-%{pkgname}
 Version:        3.3.4
-Release:        4%{?dist}
+Release:        4%{?dist}.2
 Summary:        Markdown implementation in Python
 License:        BSD
 URL:            https://python-markdown.github.io/
 Source0:        %{pypi_source}
+# https://redhat.atlassian.net/browse/RHEL-153747
+Patch0:         python-markdown-3.3.4-fix-CVE-2025-69534.patch
 BuildArch:      noarch
 
 %description
@@ -65,6 +67,9 @@ PYTHONPATH=%{buildroot}%{python3_sitelib} \
 
 
 %changelog
+* Mon Mar 30 2026 David King <dking@redhat.com> - 3.3.4-4.2
+- Fix CVE-2025-69534 (RHEL-153747)
+
 * Tue Aug 10 2021 Mohan Boddu <mboddu@redhat.com> - 3.3.4-4
 - Rebuilt for IMA sigs, glibc 2.34, aarch64 flags
   Related: rhbz#1991688
