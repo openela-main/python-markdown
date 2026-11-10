@@ -3,7 +3,7 @@
 
 Name:           python-%{pkgname}
 Version:        3.3.4
-Release:        4%{?dist}.2
+Release:        5%{?dist}
 Summary:        Markdown implementation in Python
 License:        BSD
 URL:            https://python-markdown.github.io/
@@ -67,7 +67,7 @@ PYTHONPATH=%{buildroot}%{python3_sitelib} \
 
 
 %changelog
-* Mon Mar 30 2026 David King <dking@redhat.com> - 3.3.4-4.2
+* Mon Mar 30 2026 David King <dking@redhat.com> - 3.3.4-5
 - Fix CVE-2025-69534 (RHEL-153747)
 
 * Tue Aug 10 2021 Mohan Boddu <mboddu@redhat.com> - 3.3.4-4
